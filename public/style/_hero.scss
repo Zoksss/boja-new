@@ -1,3 +1,15 @@
+.overlay {
+    background-color: black;
+    opacity: 0.7;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
 header {
     height: 100vh;
     position: relative;
@@ -39,35 +51,21 @@ header {
             }
         }
 
-        .uk-flag {
-            &::before {
-                content: url("../images/uk.png");
-                width: 20px;
-                height: 10px;
-                margin-right: 10px;
-            }
-        }
 
-        .rs-flag {
-            &::before {
-                content: url("../images/rs2.png");
-                width: 20px;
-                height: 10px;
-                margin-right: 10px;
-            }
-        }
     }
-
 
     .hero {
         height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
+        padding: 0;
+
         .hero-content {
             max-width: 680px;
             height: fit-content;
             margin-left: 5%;
+
             .hero-title {
                 font-size: 70px;
                 font-weight: 700;
@@ -95,6 +93,7 @@ header {
         .hero-image {
             position: absolute;
             background-image: url("../images/hero.png");
+            background-position: bottom;
             background-size: cover;
             width: 40%;
             height: 100%;
@@ -104,25 +103,137 @@ header {
         }
     }
 
-    .hero-arrow{
+    .hero-arrow {
         position: absolute;
         bottom: 30px;
         left: 50%;
         transform: translate(-50%, 0);
         animation: Bounce 800ms infinite alternate;
-        img{
+
+        img {
             width: 25px;
-        height: 25px;
+            height: 25px;
         }
     }
 
 }
 
-@keyframes Bounce{
-    from{
+@keyframes Bounce {
+    from {
         bottom: 20px;
     }
-    to{
+
+    to {
         bottom: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-description {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 976px) {
+    .hero-title {
+        font-size: 60px !important;
+    }
+}
+
+@media (max-width: 830px) {
+    .hero-title {
+        font-size: 55px !important;
+    }
+
+    .hero-description {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-description {
+        max-width: 400px;
+    }
+
+    .hero-title {
+        font-size: 50px !important;
+    }
+
+    .hero-image {
+        background-image: url("../images/hero.png") !important;
+
+    }
+}
+
+@media (max-width: 680px) {
+    .navbar {
+        padding: 10px 10px !important;
+    }
+
+    .navbar-logo {
+        width: 86px !important;
+    }
+
+    .hero-image {
+        position: relative !important;
+        height: 438px !important;
+        width: 100% !important;
+        z-index: -10 !important;
+        background-image: url("../images/hero.png") !important;
+
+
+        &::before {
+            content: "";
+            background-color: white;
+            width: 10%;
+            height: 40%;
+            position: absolute;
+            right: 0;
+            top: -1px;
+        }
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 120px 0px 0 0px !important;
+
+        .hero-content {
+            margin-bottom: 50px !important;
+            z-index: 6 !important;
+
+            .hero-title {
+                font-size: 42px !important;
+                line-height: 42px;
+            }
+
+            .hero-description {
+                color: $primary;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 25px;
+                margin-top: 20px;
+            }
+
+            .secondary-btn {
+                display: none;
+            }
+
+            .hero-read-more {
+                width: 117px !important;
+                height: 35px !important;
+                font-size: 14px !important;
+                margin-top: -10px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-image {
+        position: relative !important;
+        height: 438px !important;
+        width: 100% !important;
+        z-index: -10 !important;
+        background-image: url("../images/hero_mobile.png") !important;
     }
 }
