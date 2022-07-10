@@ -1,41 +1,54 @@
 @import "_variables";
 @import "_hero";
 @import "_main";
+@import "nav";
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
 
 
-html{
+html {
     scroll-behavior: smooth;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Raleway', sans-serif;
     color: $primary;
     position: relative;
+    overflow-x: hidden;
 }
 
-p{
+p {
     font-size: 18px;
     color: $secondary;
 }
 
-button{
+a{
+    text-decoration: none;
+}
+
+button {
     border: none;
     outline: none;
     transition: $transition;
     font-weight: 700;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
     }
 
 }
-.primary-btn{
+
+li {
+    list-style: none;
+}
+
+.primary-btn {
     background-color: $primary;
     color: white;
     width: 165px;
@@ -43,7 +56,7 @@ button{
     margin-top: 20px;
 }
 
-.secondary-btn{
+.secondary-btn {
     background-color: transparent;
     color: $primary;
     width: 165px;
@@ -52,8 +65,9 @@ button{
     border: 1px solid $light;
 }
 
-.container-custom{
+.container-custom {
     max-width: 1900px;
     width: 90%;
     margin: 0 auto;
 }
+
