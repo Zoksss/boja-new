@@ -197,15 +197,17 @@ header .hero-arrow img {
     width: 100% !important;
     z-index: -10 !important;
     background-image: url("../images/hero.png") !important;
-  }
-  .hero-image::before {
-    content: "";
-    background-color: white;
-    width: 10%;
-    height: 40%;
-    position: absolute;
-    right: 0;
-    top: -1px;
+    /*
+        &::before {
+            content: "";
+            background-color: white;
+            width: 10%;
+            height: 40%;
+            position: absolute;
+            right: 0;
+            top: -1px;
+        }
+        */
   }
   .hero {
     -webkit-box-orient: vertical;
@@ -509,27 +511,26 @@ li {
 }
 
 .dropdown {
-  background-color: #018b8b;
-  padding: 1em 0;
+  background-color: white;
   position: absolute;
   /*WITH RESPECT TO PARENT*/
   display: none;
-  border-radius: 8px;
   top: 35px;
 }
 
 .dropdown li + li {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .dropdown li {
-  padding: 0.5em 1em;
-  width: 8em;
-  text-align: center;
+  padding: 0.2em 0em;
+  width: 4em;
+  text-align: left;
+  margin-left: -20px;
 }
 
 .dropdown li:hover {
-  background-color: #4c9e9e;
+  background-color: white;
 }
 
 .services:hover .dropdown {
@@ -625,6 +626,37 @@ input[type=checkbox] {
 .services {
   position: absolute;
   right: 0;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #FF0000;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #FF0000;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 html {

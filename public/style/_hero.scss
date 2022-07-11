@@ -181,7 +181,7 @@ header {
         z-index: -10 !important;
         background-image: url("../images/hero.png") !important;
 
-
+        /*
         &::before {
             content: "";
             background-color: white;
@@ -191,6 +191,7 @@ header {
             right: 0;
             top: -1px;
         }
+        */
     }
 
     .hero {

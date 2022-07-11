@@ -55,27 +55,27 @@ li {
 }
 
 .dropdown {
-    background-color: rgb(1, 139, 139);
-    padding: 1em 0;
+    background-color: white;
+    //padding: 1em 0;
     position: absolute;
     /*WITH RESPECT TO PARENT*/
     display: none;
-    border-radius: 8px;
     top: 35px;
 }
 
 .dropdown li+li {
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .dropdown li {
-    padding: 0.5em 1em;
-    width: 8em;
-    text-align: center;
+    padding: 0.2em 0em;
+    width: 4em;
+    text-align: left;
+    margin-left: -20px;
 }
 
 .dropdown li:hover {
-    background-color: #4c9e9e;
+    background-color: white;
 }
 
 .services:hover .dropdown {
@@ -173,3 +173,29 @@ input[type=checkbox] {
     position: absolute;
     right: 0;
 }
+
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: $red;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: $red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
