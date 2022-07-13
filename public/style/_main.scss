@@ -142,6 +142,12 @@
             background-color: white;
             padding: 32px;
             margin: 0 20px;
+            transition: $transition;
+            height: 250px !important;
+
+            &:hover {
+                transform: scale(1.05);
+            }
 
             img {
                 width: 32px;
@@ -184,6 +190,96 @@
     }
 }
 
+.celoukupan-program-section {
+    //background-color: $ultralight;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0 0 10px;
+    margin-top: 100px;
+
+    .celoukupan-program-section-title {
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.quote-section {
+    width: 100%;
+    background-color: $ultralight;
+    padding: 70px 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .quote-section-wrapper{
+        max-width: 1200px;
+    }
+
+    .quote-section-title {
+        font-weight: 700;
+        font-size: 35px;
+    }
+
+    .quote-section-desc {
+        max-width: 100%;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    .location-title{
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .location-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        .map-img {
+            //width: 28%;
+            margin-right: 50px;
+            //min-width: 300px;
+            height: 300px;
+        }
+
+        .location-info {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+
+            .location-info-row {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+
+                .location-info-row-title {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: $primary;
+                }
+
+                .location-info-row-desc {
+                    font-size: 18px;
+                    margin-top: -5px;
+                }
+            }
+        }
+    }
+}
+
 
 @media (max-width: 1200px) {
     .proizvodi-image {
@@ -201,24 +297,29 @@
     }
 }
 
-@media (max-width: 1100px){
-    .zasto-boja-container{
+@media (max-width: 1100px) {
+    .zasto-boja-container {
         display: flex;
         flex-direction: column !important;
-        .zasto-boja-card{
+
+        .zasto-boja-card {
             margin-top: 20px !important;
         }
     }
 }
 
 @media (max-width: 976px) {
+    .proizvodi-margina {
+        margin-top: 20px !important;
+    }
 
     .proizvodi,
     .short-history {
         padding: 30px !important;
     }
 
-    .proizvodi-image, .short-history-image{
+    .proizvodi-image,
+    .short-history-image {
         margin-top: 50px !important;
     }
 
@@ -234,12 +335,40 @@
             width: 80px !important;
         }
     }
+    .quote-section{
+      padding: 70px 10% !important;  
+      .quote-section-desc{
+        font-size: 18px !important;
+      }
+    }
+    .location-wrapper{
+        flex-direction: column !important;
+        justify-content: center !important;
+
+        .map-img{
+            margin-right: 0 !important;
+        }
+        .location-info{
+            margin-top: 40px !important;
+        }
+    }
 }
 
 @media (max-width: 640px) {
     .hide-testing {
         display: none !important;
     }
+
+    .celoukupan-program-section {
+        margin-top: 20px !important;
+    }
+    .quote-section{
+        margin-top: 50px !important;
+        padding: 70px 5% !important;  
+        .quote-section-desc{
+          font-size: 16px !important;
+        }
+      }
 
 }
 
@@ -252,10 +381,11 @@
 
     .proizvodi-image,
     .short-history-image {
-        width: 93% !important;
-        height: 250px !important;
+        width: 100% !important;
+        //aspect-ratio: 2/1 !important;
+        height: auto !important;
         margin-top: 40px !important;
-        
+
     }
 
     .proizvodi-content,
