@@ -809,8 +809,7 @@ header .hero-arrow img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 120%;
-  margin-left: -10px;
+  width: 100%;
   margin-top: 20px;
   color: #858585;
 }
