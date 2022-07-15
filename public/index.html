@@ -8,6 +8,7 @@
   <title>Boja D.O.O | Pocetna </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -16,7 +17,7 @@
     <div class="overlay"></div>
 
     <nav class="navbar">
-      <div class="logo"><img class="navbar-logo" src="./images/logo.jpg"></div>
+      <div class="logo"><img class="navbar-logo" src="./images/logos/boja-logo-colored.png"></div>
       <!-- NAVIGATION MENU -->
       <ul class="nav-links">
         <!-- USING CHECKBOX HACK -->
@@ -50,7 +51,7 @@
           signalizacije, zastite za
           gradilista, BOJA D.O.O</p>
         <button class="primary-btn hero-read-more">Saznaj Vise</button>
-        <button class="secondary-btn">Kontakt</button>
+        <button class="secondary-btn hero-read-kontakt">Kontakt</button>
       </div>
 
       <div class="hero-image"></div>
@@ -63,20 +64,21 @@
   <!-- Hero section end -->
   <main>
     <!-- Parneri section start -->
-    <div class="partneri" id="partneri">
+    <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="partneri" id="partneri">
       <h2 class="partneri-title">Partneri</h2>
       <div class="partneri-image-container">
-        <img src="./images/signalbw.png" alt="" class="partneri-logo hide-testing">
-        <img src="./images/bojabw.png" alt="" class="partneri-logo hide-testing">
-        <img src="./images/signalbw.png" alt="" class="partneri-logo">
-        <img src="./images/bojabw.png" alt="" class="partneri-logo">
-        <img src="./images/signalbw.png" alt="" class="partneri-logo">
+        <img src="./images/logos/singla-logo-colored.png" alt="" class="partneri-logo hide-testing">
+        <img src="./images/logos/boja-logo-colored.png" alt="" class="partneri-logo hide-testing">
+        <img src="./images/logos/singla-logo-colored.png" alt="" class="partneri-logo">
+        <img src="./images/logos/boja-logo-colored.png" alt="" class="partneri-logo">
+        <img src="./images/logos/singla-logo-colored.png" alt="" class="partneri-logo">
       </div>
     </div>
     <!-- Parneri section end -->
 
     <!-- History section start -->
-    <div class="short-history" id="shortHistory">
+    <div class="short-history" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-offset="200"
+      id="shortHistory">
       <h2 class="short-history-title">O Nama</h2>
       <div class="row">
         <img src="./images/close.png" class="short-history-image">
@@ -99,7 +101,7 @@
 
 
     <!-- Zasto boja section start -->
-    <div class="zasto-boja">
+    <div class="zasto-boja" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-offset="200">
       <h2 class="zasto-boja-title">Zasto bas mi?</h2>
       <p class="zasto-boja-desc">Samo neki od razloga za rad sa nama.</p>
       <div class="zasto-boja-container">
@@ -127,7 +129,7 @@
 
     <!-- Proizvodi section end -->
 
-    <div class="proizvodi">
+    <div class="proizvodi" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
       <h2 class="proizvodi-title">Proizvodni program</h2>
       <div class="row">
         <img src="./images/linije.png" class="proizvodi-image">
@@ -198,7 +200,7 @@
     </div>
 
     <!-- Quote section start -->
-    <div class="quote-section">
+    <div class="quote-section" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
       <div class="quote-section-wrapper">
         <h3 class="quote-section-title">Boja d.o.o Sombor</h3>
         <p class="quote-section-desc">Delatnosti našeg preduzeća su proizvodnja registarskih tablica, proizvodnja
@@ -234,18 +236,62 @@
 
     <!-- Location section end -->
 
+    <!-- Kontakt forma start -->
+    <div class="home-contact-container" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+      <img class="home-contact-logo" src="./images/logos/boja-logo-colored.png">
+      <h3 class="home-contact-title">Posaljite nam poruku</h3>
+      <form class="home-contact-form">
+        <label>Ime</label>
+        <input>
+        <label>Email</label>
+        <input>
+        <label>Poruka</label>
+        <input class="home-contact-form-poruka">
+        <div class="form-agreement-wrapper">
+          <input type="checkbox" class="form-agree">
+          <label class="form-agree-label">Saglasan sam da podaci koje sam trenutno uneo mogu cuvati i
+            obradjivati.</label>
+        </div>
+        <input type="submit" class="primary-btn form-submit" value="Posalji">
+      </form>
+    </div>
+    <!-- Kontakt forma end -->
   </main>
 
+  <footer>
+    <div class="footer-col footer-col-1">
+      <img src="./images/logos/boja-logo-colored.png" class="footer-logo">
+    </div>
+    <div class="footer-col footer-col-2">
+      <h5 class="footer-col-title">Kontakt</h5>
+      <p class="footer-col-element">boja@official.co.rs</p>
+      <p class="footer-col-element">+381 25 412 977</p>
+      <p class="footer-col-element">Arsenija Carnojevica 16, <br>
+        25000 Sombor, Srbija</p>
+    </div>
+    <div class="footer-col footer-col-3">
+      <h5 class="footer-col-title">Proizvodi</h5>
+      <a href="#" class="footer-col-element hover-underline-animation">Oznake na putu</a>
+      <a href="#" class="footer-col-element hover-underline-animation">Saobracajni znakovi</a>
+      <a href="#" class="footer-col-element hover-underline-animation">Privrmena signalizacija</a>
+      <a href="#" class="footer-col-element hover-underline-animation">Tablice</a>
+    </div>
+    <div class="footer-col footer-col-4">
+      <a href="#" class="hover-underline-animation">O NAMA</a>
+      <a href="#" class="hover-underline-animation">PROIZVODI</a>
+      <a href="#" class="hover-underline-animation">GALERIJA</a>
+    </div>
+    <div class="footer-credits">
+      <p class="footer-copyright">©2022 Boja D.O.O ©  All rights reserved.</p>
+      <a href="#" class="footer-creator hover-underline-animation">Izrada i dizajn websajta | Zoran Todorovic</a>
+    </div>
+  </footer>
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="index.js"></script>
 </body>
 
