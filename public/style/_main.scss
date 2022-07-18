@@ -15,18 +15,20 @@
 
     .partneri-image-container {
         margin-top: 30px;
-   
+
         img {
             // height: 50px;
             width: 130px;
             margin: 0 50px;
             transition: $transition;
-            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            -webkit-filter: grayscale(100%);
+            /* Safari 6.0 - 9.0 */
             filter: grayscale(100%);
 
             &:hover {
                 transform: scale(1.1);
-                -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                -webkit-filter: grayscale(0%);
+                /* Safari 6.0 - 9.0 */
                 filter: grayscale(0%);
             }
         }
@@ -217,7 +219,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .quote-section-wrapper{
+
+    .quote-section-wrapper {
         max-width: 1200px;
     }
 
@@ -239,8 +242,9 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 100px 0 50px 0;
-    .location-title{
+    padding: 100px 0 100px 0;
+
+    .location-title {
         margin-bottom: 50px;
         font-weight: 700;
         font-size: 40px;
@@ -251,6 +255,7 @@
         width: 100%;
         justify-content: center;
         align-items: center;
+
         .map-img {
             //width: 28%;
             margin-right: 50px;
@@ -283,7 +288,8 @@
         }
     }
 }
-.home-contact-container{
+
+.home-contact-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -292,59 +298,182 @@
     padding: 0 2%;
     background-color: $ultralight;
     padding: 50px 0;
-    .home-contact-logo{
+
+    .home-contact-logo {
         width: 150px;
     }
-    .home-contact-title{
+
+    .home-contact-title {
         font-size: 40px;
         font-weight: 600;
         margin-top: 30px;
     }
-    .home-contact-form{
+
+    .home-contact-form {
         display: flex;
         flex-direction: column;
         width: 80%;
         max-width: 500px;
-        label{
+
+        label {
             margin-top: 10px;
         }
-        input{
+
+        input {
             height: 50px;
             border: 2px solid $light;
             padding: 0 20px;
-            outline:none;
+            outline: none;
             transition: $transition;
-            &:focus{
+
+            &:focus {
                 border: 2px solid $blue;
             }
         }
-        .home-contact-form-poruka{
+
+        .home-contact-form-poruka {
             height: 200px;
             padding: 0 !important;
             display: flex;
             justify-content: start;
         }
     }
-    .form-agreement-wrapper{
+
+    .form-agreement-wrapper {
         display: flex;
         width: 100%;
         margin-top: 20px;
         color: darken($light, 30%);
-        .form-agree{
+
+        .form-agree {
             display: inline-block;
             margin-right: 10px;
             margin-top: -2px;
         }
     }
-    .form-submit{
+
+    .form-submit {
         margin-left: auto;
         margin-right: auto;
         outline: none !important;
         border: none !important;
-        &:hover{
+
+        &:hover {
             transform: scale(1.1);
         }
     }
+}
+
+.vesti {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+
+    .vesti-title{
+        font-weight: 700;
+        margin: 50px 0;
+    }
+
+    .vesti-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .vesti-glavna-vest {
+        max-width: 550px;
+        padding-right: 50px;
+        margin-right: 50px;
+
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        .glavna-vest-image {
+            width: 550px;
+            height: 350px;
+        }
+
+        h5 {
+            font-size: 45px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .vesti-glavna-vest-datum {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 12px;
+                height: 12px;
+                margin-right: 10px;
+            }
+
+            p {
+                margin-bottom: 0 !important;
+                font-size: 14px;
+            }
+        }
+
+        .vesti-glavna-vest-opis {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+
+        .vesti-glavna-vest-opis {
+            font-size: 18px;
+        }
+
+        .vesti-procitaj-vise {
+            color: #111111;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #111111;
+            -webkit-transition: 200ms all ease;
+            transition: 200ms all ease;
+        }
+    }
+
+
+    .vesti-manje {
+        max-width: 500px;
+        display: flex;
+        margin-bottom: 40px;
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .vesti-manje-image {
+            width: 200px;
+            height: 130px;
+            margin-right: 40px;
+
+        }
+
+        .vesti-manje-datum {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 12px;
+                height: 12px;
+                margin-right: 10px;
+            }
+
+            p {
+                margin-bottom: 0 !important;
+                font-size: 14px;
+            }
+        }
+    }
+
 }
 
 
@@ -402,20 +531,24 @@
             width: 100px !important;
         }
     }
-    .quote-section{
-      padding: 70px 10% !important;  
-      .quote-section-desc{
-        font-size: 18px !important;
-      }
+
+    .quote-section {
+        padding: 70px 10% !important;
+
+        .quote-section-desc {
+            font-size: 18px !important;
+        }
     }
-    .location-wrapper{
+
+    .location-wrapper {
         flex-direction: column !important;
         justify-content: center !important;
 
-        .map-img{
+        .map-img {
             margin-right: 0 !important;
         }
-        .location-info{
+
+        .location-info {
             margin-top: 40px !important;
         }
     }
@@ -429,13 +562,15 @@
     .celoukupan-program-section {
         margin-top: 20px !important;
     }
-    .quote-section{
+
+    .quote-section {
         margin-top: 50px !important;
-        padding: 70px 5% !important;  
-        .quote-section-desc{
-          font-size: 16px !important;
+        padding: 70px 5% !important;
+
+        .quote-section-desc {
+            font-size: 16px !important;
         }
-      }
+    }
 
 }
 
@@ -478,6 +613,10 @@
 
     .proizvodi-margina {
         margin-top: 80px !important;
+    }
+
+    .location {
+        padding: 100px 0 50px 0 !important;
     }
 
 }
