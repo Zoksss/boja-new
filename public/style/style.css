@@ -531,9 +531,13 @@ header .hero-arrow img {
 }
 
 .proizvodi .proizvodi-title {
-  margin-bottom: 50px;
   font-size: 40px;
   font-weight: 700;
+}
+
+.proizvodi .proizvodi-desc {
+  margin-top: -10px;
+  margin-bottom: 200px;
 }
 
 .proizvodi .proizvodi-margina {
@@ -908,7 +912,7 @@ header .hero-arrow img {
 
 .vesti .vesti-title {
   font-weight: 700;
-  margin: 50px 0;
+  margin: 50px 0 75px 0;
 }
 
 .vesti .vesti-row {
@@ -1000,12 +1004,12 @@ header .hero-arrow img {
 }
 
 .vesti .vesti-manje .vesti-manje-image {
-  width: 200px;
+  width: 180px;
   height: 130px;
   margin-right: 40px;
 }
 
-.vesti .vesti-manje .vesti-manje-datum {
+.vesti-manje-datum {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1014,15 +1018,29 @@ header .hero-arrow img {
           align-items: center;
 }
 
-.vesti .vesti-manje .vesti-manje-datum img {
+.vesti-manje-datum img {
   width: 12px;
   height: 12px;
   margin-right: 10px;
 }
 
-.vesti .vesti-manje .vesti-manje-datum p {
+.vesti-manje-datum p {
   margin-bottom: 0 !important;
   font-size: 14px;
+}
+
+.glavna-vest-manja {
+  display: none !important;
+  max-width: 500px;
+  margin-bottom: 40px;
+  -webkit-transition: 200ms all ease;
+  transition: 200ms all ease;
+}
+
+.glavna-vest-manja .vesti-manje-image {
+  width: 180px;
+  height: 130px;
+  margin-right: 40px;
 }
 
 @media (max-width: 1200px) {
@@ -1034,6 +1052,14 @@ header .hero-arrow img {
   }
   .partneri-image-container img {
     margin: 0 30px !important;
+  }
+  .vesti-glavna-vest {
+    display: none !important;
+  }
+  .glavna-vest-manja {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 
@@ -1116,6 +1142,20 @@ header .hero-arrow img {
 }
 
 @media (max-width: 620px) {
+  .vesti {
+    padding: 50px 5% !important;
+  }
+  .vesti h5 {
+    font-size: 18px !important;
+  }
+  .vesti .vesti-manje-image {
+    margin-right: 10px !important;
+  }
+  .vesti .glavna-vest-manja,
+  .vesti .vesti-manje {
+    margin-bottom: 25px !important;
+    margin-right: 0px !important;
+  }
   .proizvodi-title,
   .short-history-title {
     font-size: 30px !important;
@@ -1150,6 +1190,12 @@ header .hero-arrow img {
   .location {
     padding: 100px 0 50px 0 !important;
   }
+}
+
+.under-heading {
+  margin-top: -10px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 li {
@@ -1266,8 +1312,6 @@ input[type=checkbox] {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 20px 0;
-    -webkit-transition: 200ms all ease;
-    transition: 200ms all ease;
   }
   .services {
     position: relative !important;
@@ -1277,11 +1321,13 @@ input[type=checkbox] {
     display: none;
     position: absolute;
     background-color: white;
-    right: 0;
     text-align: center;
     padding: 0 0;
     width: 100%;
     margin-top: 25px;
+    right: -100vw;
+    -webkit-transition: 200ms all ease;
+    transition: 200ms all ease;
   }
   .menu li:hover {
     display: inline-block;
@@ -1292,7 +1338,9 @@ input[type=checkbox] {
     margin-top: 12px;
   }
   input[type=checkbox]:checked ~ .menu {
-    display: block;
+    -webkit-animation: 500ms navAnimation forwards;
+            animation: 500ms navAnimation forwards;
+    display: block !important;
   }
   .hamburger {
     display: block;
@@ -1306,6 +1354,12 @@ input[type=checkbox] {
   .dropdown li:hover {
     background-color: #4c9e9e;
   }
+}
+
+.navReverse {
+  display: block !important;
+  -webkit-animation: 500ms navAnimationRev forwards;
+          animation: 500ms navAnimationRev forwards;
 }
 
 .uk-flag::before {
@@ -1341,6 +1395,42 @@ input[type=checkbox] {
   background-position: center;
   right: -20px;
   top: 2px;
+}
+
+@-webkit-keyframes navAnimation {
+  from {
+    right: -100wv;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes navAnimation {
+  from {
+    right: -100wv;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes navAnimationRev {
+  from {
+    right: -0vw;
+  }
+  to {
+    right: -100wv;
+  }
+}
+
+@keyframes navAnimationRev {
+  from {
+    right: -0vw;
+  }
+  to {
+    right: -100wv;
+  }
 }
 
 .hover-underline-animation {
@@ -1518,6 +1608,7 @@ footer .footer-credits a {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {

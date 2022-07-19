@@ -100,7 +100,6 @@ input[type=checkbox] {
     .navbar {
         justify-content: space-between;
         padding: 20px 0;
-        transition: $transition;
     }
 
     .services {
@@ -112,11 +111,13 @@ input[type=checkbox] {
         display: none;
         position: absolute;
         background-color: white;
-        right: 0;
+        //right: 0;
         text-align: center;
         padding: 0 0;
         width: 100%;
         margin-top: 25px;
+        right: -100vw;
+        transition: $transition;
     }
 
     .menu li:hover {
@@ -129,7 +130,9 @@ input[type=checkbox] {
     }
 
     input[type=checkbox]:checked~.menu {
-        display: block;
+        animation: 500ms navAnimation forwards;
+        display: block !important;
+        //right: 0;
     }
 
     .hamburger {
@@ -146,6 +149,11 @@ input[type=checkbox] {
         background-color: #4c9e9e;
     }
 
+}
+
+.navReverse{
+    display: block !important;
+    animation: 500ms navAnimationRev forwards;
 }
 
 .uk-flag {
@@ -185,7 +193,23 @@ input[type=checkbox] {
     }
 }
 
+@keyframes navAnimation {
+    from{
+        right: -100wv;
+    }
+    to{
+        right: 0;
+    }
+}
 
+@keyframes navAnimationRev {
+    from{
+        right: -0vw;
+    }
+    to{
+        right: -100wv;
+    }
+}
 
 .hover-underline-animation {
     display: inline-block;
