@@ -339,9 +339,17 @@
 
         .home-contact-form-poruka {
             height: 200px;
-            padding: 0 !important;
             display: flex;
             justify-content: start;
+            padding: 10px 20px;
+            border: 2px solid $light;
+            padding: 0 20px;
+            outline: none;
+            max-width: 100%;
+            min-width: 100%;
+            &:focus {
+                border: 2px solid $blue;
+            }
         }
     }
 
@@ -586,6 +594,17 @@
 @media (max-width: 640px) {
     .hide-testing {
         display: none !important;
+    }
+
+    .navbar{
+        width: 100% !important;
+        padding-right: 5% !important;
+        .navbar-logo{
+            margin-left: -5% !important;
+        }
+        .hamburger{
+            margin-right: 5% !important;
+        }
     }
 
     .celoukupan-program-section {

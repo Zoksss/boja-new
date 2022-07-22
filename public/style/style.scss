@@ -78,3 +78,9 @@ li {
     margin: 0 auto;
 }
 
+
+@media (max-width: 640px) {
+    .hide-on-mob_development{
+        display: none !important;
+    }
+}

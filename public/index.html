@@ -23,17 +23,17 @@
         <label for="checkbox_toggle" class="hamburger">&#9776;</label>
         <!-- NAVIGATION MENUS -->
         <div class="menu" id="menu">
-          <li><a href="/" class="hover-underline-animation">POČETNA</a></li>
-          <li><a href="/" class="hover-underline-animation">O NAMA</a></li>
-          <li><a href="/" class="hover-underline-animation">PROIZVODI</a></li>
-          <li><a href="/" class="hover-underline-animation">GALERIJA</a></li>
-          <li><a href="/" class="hover-underline-animation">KONTAKT</a></li>
+          <li><a href="#" class="hover-underline-animation">POČETNA</a></li>
+          <li><a href="#" class="hover-underline-animation">O NAMA</a></li>
+          <li><a href="#" class="hover-underline-animation">PROIZVODI</a></li>
+          <li><a href="#" class="hover-underline-animation">GALERIJA</a></li>
+          <li><a href="#" class="hover-underline-animation">KONTAKT</a></li>
           <li class="services">
             <a role="button"><span class="rs-flag"></span>SR</a>
             <!-- DROPup MENU -->
             <ul class="dropdown">
-              <li><a href="/"><span class="uk-flag"></span>EN </a></li>
-              <li><a href="/"><span class="rs-flag"></span>SR </a></li>
+              <li><a href="#"><span class="uk-flag"></span>EN </a></li>
+              <li><a href="#"><span class="rs-flag"></span>SR </a></li>
             </ul>
           </li>
         </div>
@@ -55,11 +55,11 @@
       <div class="hero-image"></div>
 
     </div>
-    <div class="hero-contact-info">
+    <div class="hero-contact-info hide-on-mob_development">
       <a class="hero-contact-info-tel" href="tel:+38125412977">+381 25 412 977</a>
       <a class="hero-contact-info-mail" href="mailto:office@boja.co.rs">office@boja.co.rs</a>
     </div>
-    <a class="hero-arrow" href="#partneri"><img src="./images/arrow1.png" alt=""></a>
+    <a class="hero-arrow hide-on-mob_development" href="#partneri"><img src="./images/arrow1.png" alt=""></a>
   </header>
 
   <!-- Hero section end -->
@@ -251,14 +251,14 @@
       <h3 class="home-contact-title">Posaljite nam poruku</h3>
       <form class="home-contact-form">
         <label>Ime</label>
-        <input>
+        <input type="text">
         <label>Email</label>
-        <input>
+        <input type="text">
         <label>Poruka</label>
-        <input class="home-contact-form-poruka">
+        <textarea type="textbox" class="home-contact-form-poruka"></textarea>
         <div class="form-agreement-wrapper">
-          <input type="checkbox" class="form-agree">
-          <label class="form-agree-label">Saglasan sam da podaci koje sam trenutno uneo mogu cuvati i
+          <input type="checkbox" class="form-agree" id="formAgree">
+          <label class="form-agree-label" for="formAgree">Saglasan sam da podaci koje sam trenutno uneo mogu cuvati i
             obradjivati.</label>
         </div>
         <input type="submit" class="primary-btn form-submit" value="Posalji">
